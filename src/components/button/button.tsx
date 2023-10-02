@@ -22,9 +22,8 @@ const Button: React.FC<ButtonProps> = ({
     <button
       type="button"
       onClick={onClick}
-      primary={primary}
+      className={`bsuik-button ${primary ? "bsuik-button--primary" : null} ${size ? `bsuik-button--${size}` : "bsuik-button--medium"}`}
       disabled={disabled}
-      size={size}
       {...props}
     >
       {text}

@@ -1,4 +1,4 @@
-.bs-button {
+.bsuik-button {
   border: 0;
   line-height: 1;
   font-size: 15px;
@@ -7,4 +7,21 @@
   font-weight: bold;
   border-radius: 10px;
   display: inline-block;
+  background-color: #000;
+}
+
+.bsuik-button--primary {
+  background-color: #fff;
+}
+
+.bsuik-button--small {
+  padding: 7px 25px 8px;
+}
+
+.bsuik-button--medium {
+  padding: 9px 30px 11px;
+}
+
+.bsuik-button--large {
+  padding: 14px 30px 16px;
 }
