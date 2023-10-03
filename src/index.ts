@@ -1,3 +1,3 @@
-// components/index.ts
+// src/index.ts
 
-export * from "./components/button";
+export * from "./components";
