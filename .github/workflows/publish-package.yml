@@ -1,0 +1,25 @@
+name: publish on github
+
+run-name: ${{ github.actor }} - publishing package to github
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          registry-url: https://npm.pkg.github.com/
+          
+      - run: npm ci
+      - run: npm run test
+      - run: npm run build
+      - run: npm run publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
