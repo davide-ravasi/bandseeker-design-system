@@ -11,6 +11,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      # This step checks out a copy of your repository.
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
